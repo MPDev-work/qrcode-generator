@@ -35,7 +35,7 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <div className="lg:h-screen min-h-screen flex flex-col justify-center overflow-hidden">
+      <div className="lg:h-screen min-h-screen flex flex-col justify-center overflow-hidden mb-5">
         <Header theme={theme} toggleTheme={toggleTheme} />
 
         <main className="flex-1 max-w-7xl w-full px-4 sm:px-6 lg:px-8 mt-4">
