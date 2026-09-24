@@ -35,12 +35,12 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <div className="lg:h-max w-screen min-h-screen flex flex-col justify-center overflow-hidden mb-5">
+      <div className="lg:h-max w-screen min-h-screen flex flex-col justify-center overflow-hidden lg:mb-2.5 mb-5">
         <Header theme={theme} toggleTheme={toggleTheme} />
 
         <main className="flex-1 w-full px-2.5 mt-20">
           <div className="flex flex-col lg:flex-row gap-5">
-            <div className="lg:order-2 lg:w-[300px] flex flex-col gap-2.5">
+            <div className="lg:order-2 flex flex-col gap-2.5">
               <QRPreview settings={settings} />
             </div>
 

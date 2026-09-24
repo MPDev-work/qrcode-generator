@@ -46,7 +46,7 @@ export function AdvancedControls({ settings, updateSetting }) {
               }
               className={`py-2.5 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
                 settings.qrOptions.errorCorrectionLevel === level.value
-                  ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black shadow-xs ring-1 ring-[#1E90FF]'
+                  ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black ring-1 ring-[#1E90FF]'
                   : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-400'
               }`}
             >

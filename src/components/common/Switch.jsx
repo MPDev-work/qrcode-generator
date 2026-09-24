@@ -22,7 +22,7 @@ export function Switch({ checked, onChange, label, description, id }) {
         />
         {/* Switch thumb: crisp white circle */}
         <div
-          className={`absolute top-0.5 left-0.5 w-5.5 h-5.5 bg-white rounded-full shadow-md transform transition-transform duration-200 ease-in-out ${
+          className={`absolute top-0.5 left-0.5 w-5.5 h-5.5 bg-white rounded-full transform transition-transform duration-200 ease-in-out ${
             checked ? 'translate-x-5.5' : 'translate-x-0'
           }`}
         />

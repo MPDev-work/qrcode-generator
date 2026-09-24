@@ -10,7 +10,7 @@ export function ContentInput({ settings, updateSetting }) {
           value={settings.data}
           onChange={(e) => updateSetting('data', e.target.value)}
           placeholder="Paste a URL or enter text..."
-          className="w-full h-40 px-4 py-4 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl focus:outline-none focus:border-[#1E90FF] focus:ring-4 focus:ring-[#1E90FF]/20 text-lg text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 resize-none transition-all shadow-2xs"
+          className="w-full h-40 px-4 py-4 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl focus:outline-none focus:border-[#1E90FF] focus:ring-4 focus:ring-[#1E90FF]/20 text-lg text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 resize-none transition-all"
         />
         <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
           The QR code & 1000px card update automatically as you type.

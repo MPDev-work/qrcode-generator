@@ -53,8 +53,8 @@ export function CardControls({ settings, updateSetting }) {
           onChange={(checked) =>
             updateSetting(['cardOptions', 'enabled'], checked)
           }
-          label="1:1 Square Card Template (1000px)"
-          description="Renders the aesthetic card sample with custom typography & 1000px resolution"
+          label="Square Card Template)"
+          description="Renders the aesthetic card sample with custom typography."
         />
       </div>
 
@@ -62,7 +62,7 @@ export function CardControls({ settings, updateSetting }) {
         <>
           {/* Top Heading */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
               <Type className="w-4 h-4 text-[#1E90FF]" />
               Card Heading (Top Script)
             </label>
@@ -92,7 +92,7 @@ export function CardControls({ settings, updateSetting }) {
                   }
                   className={`p-3 rounded-xl border text-center transition-all cursor-pointer ${
                     (card.headerFont || 'Dancing Script') === font.id
-                      ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black shadow-xs ring-1 ring-[#1E90FF]'
+                      ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black'
                       : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-400'
                   }`}
                 >
@@ -115,7 +115,7 @@ export function CardControls({ settings, updateSetting }) {
 
           {/* Social Handle */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
               <AtSign className="w-4 h-4 text-[#1E90FF]" />
               Social Handle / Subtitle
             </label>
@@ -132,7 +132,7 @@ export function CardControls({ settings, updateSetting }) {
 
           {/* Website / Footer Text */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
               <Globe className="w-4 h-4 text-[#1E90FF]" />
               Website / Tagline
             </label>
@@ -149,7 +149,7 @@ export function CardControls({ settings, updateSetting }) {
 
           {/* Aesthetic Color Palettes */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-2">
               <Palette className="w-4 h-4 text-[#1E90FF]" />
               Card Aesthetic Presets
             </label>
@@ -164,17 +164,19 @@ export function CardControls({ settings, updateSetting }) {
                     onClick={() => handleApplyPalette(p)}
                     className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                       isSelected
-                        ? 'border-black bg-gray-50 dark:bg-gray-800/80 ring-2 ring-[#1E90FF]'
+                        ? 'bg-black text-white border-black'
                         : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-gray-300'
                     }`}
                   >
                     <div
-                      className="w-6 h-6 rounded-lg border border-black/10 shadow-inner flex items-center justify-center text-[10px] font-bold"
+                      className="w-6 h-6 rounded-lg border border-black/10 flex items-center justify-center text-[10px] font-bold"
                       style={{ backgroundColor: p.bg, color: p.text }}
                     >
                       Aa
                     </div>
-                    <span className="text-xs font-semibold text-gray-800 dark:text-gray-200 truncate">
+                    <span
+                      className={`text-xs font-semibold ${isSelected ? 'text-white' : 'text-black'} dark:text-gray-200 truncate`}
+                    >
                       {p.name}
                     </span>
                   </button>

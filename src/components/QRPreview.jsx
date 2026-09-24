@@ -276,7 +276,7 @@ export function QRPreview({ settings }) {
   };
 
   return (
-    <div className="lg:fixed sticky lg:w-max w-full bg-surface-light dark:bg-surface-dark rounded-3xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center right-2.5 top-20">
+    <div className="lg:fixed sticky lg:w-[420px] w-full lg:h-[calc(100vh-90px)] bg-surface-light dark:bg-surface-dark rounded-3xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center right-2.5 top-20">
       <div className="w-full flex items-center justify-between mb-5">
         <div>
           <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
@@ -291,7 +291,7 @@ export function QRPreview({ settings }) {
         </div>
 
         {settings.data && (
-          <span className="text-xs font-semibold px-2.5 py-1 bg-black text-white dark:bg-white dark:text-black rounded-full flex items-center gap-1.5 shadow-2xs">
+          <span className="text-xs font-semibold px-2.5 py-1 bg-black text-white dark:bg-white dark:text-black rounded-full flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#1E90FF] animate-pulse" />
             Live
           </span>
@@ -393,7 +393,7 @@ export function QRPreview({ settings }) {
           <button
             onClick={handleDownload}
             disabled={!settings.data || !!error || isExporting}
-            className="flex-1 bg-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black px-5 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed shadow-xs hover:shadow-sm cursor-pointer active:scale-98"
+            className="flex-1 bg-black hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black px-5 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer active:scale-98"
           >
             <Download className="w-4 h-4" />
             <span>{isExporting ? 'Generating...' : 'Download'}</span>
@@ -412,7 +412,7 @@ export function QRPreview({ settings }) {
             ) : (
               <ImageIcon className="w-4 h-4 text-[#1E90FF]" />
             )}
-            <span>{copiedImage ? 'Card Copied!' : 'Copy 1000px Card'}</span>
+            <span>{copiedImage ? 'Card Copied!' : 'Copy Card'}</span>
           </button>
 
           <button

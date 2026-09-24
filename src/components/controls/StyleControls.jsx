@@ -34,7 +34,7 @@ export function StyleControls({ settings, updateSetting }) {
               }
               className={`px-3 py-2.5 border rounded-xl text-sm font-medium transition-all cursor-pointer ${
                 settings.dotsOptions.type === style.value
-                  ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black shadow-xs ring-1 ring-[#1E90FF]'
+                  ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black ring-1 ring-[#1E90FF]'
                   : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-400'
               }`}
             >
@@ -57,7 +57,7 @@ export function StyleControls({ settings, updateSetting }) {
               }
               className={`px-3 py-2.5 border rounded-xl text-sm font-medium transition-all cursor-pointer ${
                 settings.cornersSquareOptions.type === style.value
-                  ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black shadow-xs ring-1 ring-[#1E90FF]'
+                  ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black ring-1 ring-[#1E90FF]'
                   : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-400'
               }`}
             >
@@ -80,7 +80,7 @@ export function StyleControls({ settings, updateSetting }) {
               }
               className={`px-3 py-2.5 border rounded-xl text-sm font-medium transition-all cursor-pointer ${
                 settings.cornersDotOptions.type === style.value
-                  ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black shadow-xs ring-1 ring-[#1E90FF]'
+                  ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black ring-1 ring-[#1E90FF]'
                   : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:border-gray-400'
               }`}
             >
