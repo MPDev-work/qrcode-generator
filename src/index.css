@@ -9,6 +9,11 @@
   --color-surface-dark: #1e1e1e;
 }
 
+html,
+body {
+  scrollbar-width: none;
+}
+
 @layer base {
   body {
     @apply bg-background-light text-gray-900 transition-colors duration-200;

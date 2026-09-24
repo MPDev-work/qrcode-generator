@@ -4,7 +4,7 @@ export const defaultSettings = {
   data: '',
   width: 300,
   height: 300,
-  margin: 10,
+  margin: 0,
   qrOptions: {
     errorCorrectionLevel: 'Q', // L, M, Q, H
   },
@@ -15,22 +15,41 @@ export const defaultSettings = {
     crossOrigin: 'anonymous',
   },
   dotsOptions: {
-    color: '#000000',
+    color: '#1E1B18', // Dark charcoal/black ink from the sample
     type: 'square', // rounded, dots, classy, classy-rounded, square, extra-rounded
   },
   backgroundOptions: {
-    color: '#ffffff',
-    transparent: false,
+    color: 'transparent', // Transparent so it merges cleanly with the card background!
+    transparent: true,
   },
   cornersSquareOptions: {
-    color: '#000000',
+    color: '#1E1B18',
     type: 'square', // dot, square, extra-rounded
   },
   cornersDotOptions: {
-    color: '#000000',
+    color: '#1E1B18',
     type: 'square', // dot, square
   },
   image: null, // URL or base64
+
+  // Logo Customization options
+  logoOptions: {
+    platformId: null,
+    colorMode: 'auto', // 'auto' | 'white' | 'black' | 'brand' | 'custom'
+    customColor: '#FFFFFF',
+  },
+
+  // Card Template options (matching the 1:1 1000px design sample)
+  cardOptions: {
+    enabled: true,
+    headerText: 'connect with us',
+    headerFont: 'Dancing Script', // 'Dancing Script' | 'Caveat' | 'Inter'
+    subText: '@YourSocialHandle',
+    footerText: 'www.YourSite.com',
+    bgColor: '#FED0C5', // Exact soft blush peach from sample
+    textColor: '#1E1B18',
+    cornerRadius: 80, // for 1000px canvas scale (~24px at preview scale)
+  },
 };
 
 export function useQRSettings() {
@@ -63,8 +82,32 @@ export function useQRSettings() {
 
   const applyPreset = useCallback((presetSettings) => {
     setSettings((prev) => ({
-      ...defaultSettings,
+      ...prev,
       ...presetSettings,
+      dotsOptions: {
+        ...prev.dotsOptions,
+        ...(presetSettings.dotsOptions || {}),
+      },
+      backgroundOptions: {
+        ...prev.backgroundOptions,
+        ...(presetSettings.backgroundOptions || {}),
+      },
+      cornersSquareOptions: {
+        ...prev.cornersSquareOptions,
+        ...(presetSettings.cornersSquareOptions || {}),
+      },
+      cornersDotOptions: {
+        ...prev.cornersDotOptions,
+        ...(presetSettings.cornersDotOptions || {}),
+      },
+      cardOptions: {
+        ...prev.cardOptions,
+        ...(presetSettings.cardOptions || {}),
+      },
+      logoOptions: {
+        ...prev.logoOptions,
+        ...(presetSettings.logoOptions || {}),
+      },
       data: prev.data,
     }));
   }, []);

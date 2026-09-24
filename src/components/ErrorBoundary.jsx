@@ -35,7 +35,7 @@ export class ErrorBoundary extends React.Component {
             </p>
             <button
               onClick={this.handleReset}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors shadow-sm"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black rounded-xl font-semibold transition-colors shadow-sm cursor-pointer"
             >
               <RefreshCw className="w-4 h-4" />
               Reload Application

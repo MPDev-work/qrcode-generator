@@ -35,16 +35,16 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <div className="lg:h-screen min-h-screen flex flex-col justify-center overflow-hidden mb-5">
+      <div className="lg:h-max w-screen min-h-screen flex flex-col justify-center overflow-hidden mb-5">
         <Header theme={theme} toggleTheme={toggleTheme} />
 
-        <main className="flex-1 max-w-7xl w-full px-4 sm:px-6 lg:px-8 mt-4">
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="lg:order-2 lg:w-1/2 xl:w-2/5 flex flex-col gap-6">
+        <main className="flex-1 w-full px-2.5 mt-20">
+          <div className="flex flex-col lg:flex-row gap-5">
+            <div className="lg:order-2 lg:w-[300px] flex flex-col gap-2.5">
               <QRPreview settings={settings} />
             </div>
 
-            <div className="lg:order-1 lg:w-1/2 xl:w-3/5 flex flex-col gap-6">
+            <div className="lg:order-1 lg:w-[calc(100%-430px)] flex flex-col gap-6">
               <div className="bg-surface-light dark:bg-surface-dark rounded-3xl border border-gray-200 dark:border-gray-800 overflow-hidden">
                 <CustomizationPanel
                   settings={settings}
