@@ -68,7 +68,7 @@ export function CustomizationPanel({
             <button
               key={preset.id}
               onClick={() => applyPreset(preset.settings)}
-              className="whitespace-nowrap px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all shadow-2xs cursor-pointer active:scale-95"
+              className="whitespace-nowrap px-3.5 py-1.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300 hover:border-black dark:hover:border-white hover:text-black dark:hover:text-white transition-all cursor-pointer active:scale-95"
             >
               {preset.name}
             </button>
