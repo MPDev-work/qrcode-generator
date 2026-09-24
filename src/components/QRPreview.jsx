@@ -276,7 +276,7 @@ export function QRPreview({ settings }) {
   };
 
   return (
-    <div className="lg:fixed sticky lg:w-[420px] w-full lg:h-[calc(100vh-90px)] bg-surface-light dark:bg-surface-dark rounded-3xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center right-2.5 top-20">
+    <div className="lg:fixed sticky lg:w-[420px] w-full bg-surface-light dark:bg-surface-dark rounded-3xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center right-2.5 bottom-2.5 top-[58px]">
       <div className="w-full flex items-center justify-between mb-5">
         <div>
           <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">

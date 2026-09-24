@@ -4,7 +4,7 @@ export function Header({ theme, toggleTheme }) {
   return (
     <header className="fixed inset-x-0 border-b border-gray-200/80 dark:border-gray-800 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md top-0 z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12">
           {/* Jvke Logo */}
           <div className="flex items-center gap-3">
             <div className="flex flex-col">
