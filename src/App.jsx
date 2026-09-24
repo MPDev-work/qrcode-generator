@@ -35,18 +35,17 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen flex flex-col">
+      <div className="lg:h-screen min-h-screen flex flex-col justify-center overflow-hidden">
         <Header theme={theme} toggleTheme={toggleTheme} />
 
-        <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+        <main className="flex-1 max-w-7xl w-full px-4 sm:px-6 lg:px-8 mt-4">
           <div className="flex flex-col lg:flex-row gap-8">
-            {/* Mobile: Preview stacked on top. Desktop: Left panel, Right preview */}
             <div className="lg:order-2 lg:w-1/2 xl:w-2/5 flex flex-col gap-6">
               <QRPreview settings={settings} />
             </div>
 
             <div className="lg:order-1 lg:w-1/2 xl:w-3/5 flex flex-col gap-6">
-              <div className="bg-surface-light dark:bg-surface-dark rounded-3xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+              <div className="bg-surface-light dark:bg-surface-dark rounded-3xl border border-gray-200 dark:border-gray-800 overflow-hidden">
                 <CustomizationPanel
                   settings={settings}
                   updateSetting={updateSetting}

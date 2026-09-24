@@ -119,7 +119,7 @@ export function QRPreview({ settings }) {
   };
 
   return (
-    <div className="bg-surface-light dark:bg-surface-dark rounded-3xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center sticky top-24">
+    <div className="h-max lg:h-full bg-surface-light dark:bg-surface-dark rounded-3xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center sticky top-20">
       <div className="w-full flex items-center justify-between mb-6">
         <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100">
           Live Preview
@@ -132,13 +132,13 @@ export function QRPreview({ settings }) {
       </div>
 
       {/* QR Code Container Wrapper */}
-      <div className="relative bg-white p-4 rounded-2xl shadow-inner border border-gray-100 dark:border-gray-700 flex items-center justify-center min-h-[340px] min-w-[340px] overflow-hidden">
+      <div className="relative p-4 shadow-inner border border-gray-100 dark:border-gray-700 rounded-2xl flex items-center justify-center min-h-[340px] min-w-[340px] overflow-hidden">
         {/* Isolated DOM container for qr-code-styling. React NEVER renders children inside this div! */}
         <div ref={qrRef} className="flex items-center justify-center" />
 
         {/* Empty content placeholder overlay (managed entirely by React as a sibling) */}
         {!settings.data && !error && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/85 dark:bg-gray-900/85 backdrop-blur-sm rounded-2xl z-10 p-6 text-center pointer-events-none">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/85 dark:bg-gray-900/85 backdrop-blur-sm z-10 p-6 text-center pointer-events-none">
             <div className="w-12 h-12 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-3">
               <Copy className="w-6 h-6" />
             </div>
@@ -153,7 +153,7 @@ export function QRPreview({ settings }) {
 
         {/* Error overlay */}
         {error && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-red-50/95 dark:bg-red-950/95 backdrop-blur-sm p-6 text-center z-20 rounded-2xl">
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-red-50/95 dark:bg-red-950/95 backdrop-blur-sm p-6 text-center z-20">
             <div className="bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400 p-3 rounded-full mb-3">
               <AlertCircle className="h-6 w-6" />
             </div>
